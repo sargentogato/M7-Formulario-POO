@@ -1,0 +1,178 @@
+@import "./config/variables";
+
+:root {
+  --alertColor: red;
+  --successColor: green;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 12% repeat(3, 1fr) 12%;
+  grid-template-rows: 1fr 1fr 80%;
+
+  background: rgb(212, 212, 212);
+  background: linear-gradient(180deg, rgba(212, 212, 212, 0.1741071428571429) 90%, rgba(212, 212, 212, 0.8855917366946778) 100%);
+}
+
+/****Title Box*****/
+.titleBox {
+  grid-column-start: 1;
+  grid-column-end: 6;
+
+  display: flex;
+  align-items: center;
+  padding-left: $paddingGeneral;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 15px -10px rgba(0, 0, 0, 0.5);
+
+  .mainTitle {
+    font-size: $fontSizeGeneral;
+  }
+}
+
+/****Message Box*****/
+.messageBox {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 1rem;
+  border-radius: $radiusGeneral;
+
+  .message {
+    width: 100%;
+    font-size: $messageFontSize;
+    color: white;
+    padding-left: $paddingTitleCard;
+  }
+
+  &.alert {
+    background-color: var(--alertColor);
+  }
+
+  &.success {
+    background-color: var(--successColor);
+  }
+}
+
+.messageBox,
+.productBox {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+/****Product Box*****/
+
+.productBox {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 1.5rem;
+}
+
+/* Add Product */
+.addProduct {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  .addProduct__card {
+    border: 1px solid #dbdbdb;
+    box-shadow: 1px 1px 32px -10px rgba(0, 0, 0, 0.5);
+    border-radius: $radiusGeneral;
+  }
+}
+
+.addProduct__card {
+  .cardTitle {
+    height: 3rem;
+    width: 100%;
+    padding-left: $paddingTitleCard;
+    background-color: rgb(236, 236, 236);
+    font-size: $fontSizeTitle;
+    line-height: 3rem;
+  }
+}
+
+.inputsCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  .input {
+    border-radius: $radiusGeneral;
+  }
+
+  .btn {
+    border-radius: $btnRadius;
+    background-color: #6236e1;
+  }
+
+  .input {
+    margin-block-end: 1.2rem;
+  }
+
+  .input,
+  .btn {
+    width: 100%;
+    height: 2.5rem;
+    border-width: 1px;
+    border-color: rgba(161, 161, 161, 0.4);
+  }
+}
+
+.input {
+  &:focus {
+    border-color: blue;
+  }
+}
+
+input[placeholder] {
+  padding-left: 1rem;
+}
+
+/* Show product */
+.showProduct {
+  grid-row-start: 1;
+  grid-row-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 8;
+
+  .productItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.itemLine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $radiusGeneral;
+  border: 1px solid #dbdbdb;
+  padding: 0.5rem 0;
+
+  span {
+    margin-inline-end: 0.5rem;
+  }
+
+  .btnDelete {
+    font-weight: bolder;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--alertColor);
+    padding: 0.2rem 2rem;
+    border-radius: $btnRadius;
+  }
+}

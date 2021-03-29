@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+
+  <title>Nivel I</title>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="titleBox">
+      <h1 class="mainTitle">Product App </h1>
+    </div>
+
+    <div class="messageBox alert">
+      <p class="message">
+        Soy el mensaje
+      </p>
+    </div>
+
+    <div class="productBox">
+      <div class="addProduct">
+        <div class="addProduct__card">
+          <h3 class="cardTitle">
+            Add A Product
+          </h3>
+          <form id="inputsCard" class="inputsCard">
+            <input id="product" class="input" type="text" placeholder="Producto">
+            <input id="price" class="input" type="text" placeholder="Precio">
+            <input id="year" class="input" type="text" placeholder="Año">
+            <input class="btn" type="submit">
+          </form>
+        </div><!-- card -->
+      </div><!-- Add Product -->
+
+      <div class="showProduct">
+        <div id="showProducts" class="productItem">
+          <p class="itemLine">
+            <b>Product Name:</b><span> Olla</span>
+            <b>Precio:</b><span> 58</span>
+            <b>Año:</b><span> 2021</span>
+            <button class="btnDelete">Delete</button>
+          </p>
+        </div>
+      </div><!-- show producto -->
+
+    </div><!-- producto box -->
+  </div><!-- end container -->
+
+  <script src="./script/main.js" type="module"></script>
+</body>
+
+</html>

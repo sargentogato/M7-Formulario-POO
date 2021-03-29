@@ -1,0 +1,157 @@
+:root {
+  --alertColor: red;
+  --successColor: green;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 12% repeat(3, 1fr) 12%;
+  grid-template-rows: 1fr 1fr 80%;
+  background: #d4d4d4;
+  background: linear-gradient(180deg, rgba(212, 212, 212, 0.1741071429) 90%, rgba(212, 212, 212, 0.8855917367) 100%);
+}
+
+/****Title Box*****/
+.titleBox {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 1px 15px -10px rgba(0, 0, 0, 0.5);
+}
+.titleBox .mainTitle {
+  font-size: 3rem;
+}
+
+/****Message Box*****/
+.messageBox {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-start: 1rem;
+  border-radius: 5px;
+}
+.messageBox .message {
+  width: 100%;
+  font-size: 1rem;
+  color: white;
+  padding-left: 1rem;
+}
+.messageBox.alert {
+  background-color: var(--alertColor);
+}
+.messageBox.success {
+  background-color: var(--successColor);
+}
+
+.messageBox,
+.productBox {
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+
+/****Product Box*****/
+.productBox {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  gap: 1.5rem;
+}
+
+/* Add Product */
+.addProduct {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.addProduct .addProduct__card {
+  border: 1px solid #dbdbdb;
+  box-shadow: 1px 1px 32px -10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.addProduct__card .cardTitle {
+  height: 3rem;
+  width: 100%;
+  padding-left: 1rem;
+  background-color: #ececec;
+  font-size: 1.5rem;
+  line-height: 3rem;
+}
+
+.inputsCard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+.inputsCard .input {
+  border-radius: 5px;
+}
+.inputsCard .btn {
+  border-radius: 25px;
+  background-color: #6236e1;
+}
+.inputsCard .input {
+  margin-block-end: 1.2rem;
+}
+.inputsCard .input,
+.inputsCard .btn {
+  width: 100%;
+  height: 2.5rem;
+  border-width: 1px;
+  border-color: rgba(161, 161, 161, 0.4);
+}
+
+.input:focus {
+  border-color: blue;
+}
+
+input[placeholder] {
+  padding-left: 1rem;
+}
+
+/* Show product */
+.showProduct {
+  grid-row-start: 1;
+  grid-row-end: 8;
+  grid-column-start: 3;
+  grid-column-end: 8;
+}
+.showProduct .productItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.itemLine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  padding: 0.5rem 0;
+}
+.itemLine span {
+  margin-inline-end: 0.5rem;
+}
+.itemLine .btnDelete {
+  font-weight: bolder;
+  font-size: 1rem;
+  color: white;
+  background-color: var(--alertColor);
+  padding: 0.2rem 2rem;
+  border-radius: 25px;
+}/*# sourceMappingURL=style.css.map */
